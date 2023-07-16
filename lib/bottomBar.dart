@@ -1,7 +1,7 @@
 //import 'package:coffee_and_breakfast_app/profile/profile.dart';
 
 //import 'package:coffee_and_breakfast_app/bags/Bags.dart';
-//import 'favorites/favorites.dart';
+import 'favorites/favorites.dart';
 
 import 'Discover/body.dart';
 import 'package:flutter/material.dart';
@@ -34,11 +34,11 @@ class _MenuState extends State<BottomBar> {
             ? Menu(
                 menu: menu,
               )
-            : /*index == 2
+            : index == 2
                 ? Favorites(
                     favorites: menu,
                   )
-                : index == 3
+                :/* index == 3
                     ? Bags(
                         coffeeobj: menu,
                       )

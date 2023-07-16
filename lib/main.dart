@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'bottomBar.dart';
-import 'Discover/body.dart';
 import 'splash_screen/splashscree.dart';
 
 void main() {
