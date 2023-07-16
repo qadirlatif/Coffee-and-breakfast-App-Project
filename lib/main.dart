@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-//import 'bottomBar.dart';
+import 'bottomBar.dart';
+import 'Discover/body.dart';
 import 'splash_screen/splashscree.dart';
 
 void main() {
@@ -24,8 +25,9 @@ class MyApp extends StatelessWidget {
       ),
       home: const SplashScreen(),
       routes: {
-        //'/home': (context) => const BottomBar(),
+        '/home': (context) => const BottomBar(),
         //'/Coffee': (context) => const Coffee(),
+        
         
       },
     );
