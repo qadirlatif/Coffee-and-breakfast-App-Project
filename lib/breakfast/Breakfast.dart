@@ -1,4 +1,5 @@
-//import 'package:coffee_breakfast_app/breakfast_menu/Breakfast_menu.dart';
+// ignore: file_names
+import 'package:coffee_breakfast_app/breakfast_menu/Breakfast_menu.dart';
 import 'package:coffee_breakfast_app/preloader/preloader.dart';
 import 'package:flutter/material.dart';
 import '../model_class/model_class.dart';
@@ -6,6 +7,7 @@ import '../model_class/model_class.dart';
 
 // ignore: must_be_immutable
 class Breakfast extends StatefulWidget {
+
   Breakfast({super.key, required this.coffeeobj});
   Coffeeandbreakfast coffeeobj;
   @override
@@ -91,11 +93,11 @@ class _BreakfastState extends State<Breakfast> {
                   child: ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        /*Navigator.push(
+                        Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => BreakfastMenu(
-                              coffeeobj: widget.coffeeobj)));*/
+                              coffeeobj: widget.coffeeobj)));
                       });
                     },
                     child: const Text("Full Menu"),
