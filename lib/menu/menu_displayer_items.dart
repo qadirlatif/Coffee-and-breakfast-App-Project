@@ -1,6 +1,6 @@
 //import 'package:coffee_and_breakfast_app/breakfast/Breakfast.dart';
 import 'package:flutter/material.dart';
-//import '../Coffee_menu/Coffee.dart';
+import '../Coffee_menu/Coffee.dart';
 import '../model_class/model_class.dart';
 // ignore: depend_on_referenced_packages
 import 'package:cached_network_image/cached_network_image.dart';
@@ -30,7 +30,7 @@ class _MenuItemsState extends State<MenuItems> {
             onTap: () {
               setState(() {
                 if (widget.menu.name == "Coffee") {
-                  /*Navigator.push(
+                  Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => Coffee(
@@ -38,7 +38,7 @@ class _MenuItemsState extends State<MenuItems> {
                               coffeeobj: widget.coffeeobj)));
                   //Navigator.pushNamed(context, '/Coffee');
                 } else if (widget.menu.name == "BreakFast") {
-                  Navigator.push(
+                  /*Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => Breakfast(
