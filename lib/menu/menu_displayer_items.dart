@@ -1,4 +1,4 @@
-//import 'package:coffee_and_breakfast_app/breakfast/Breakfast.dart';
+import 'package:coffee_breakfast_app/breakfast/Breakfast.dart';
 import 'package:flutter/material.dart';
 import '../Coffee_menu/Coffee.dart';
 import '../model_class/model_class.dart';
@@ -38,12 +38,12 @@ class _MenuItemsState extends State<MenuItems> {
                               coffeeobj: widget.coffeeobj)));
                   //Navigator.pushNamed(context, '/Coffee');
                 } else if (widget.menu.name == "BreakFast") {
-                  /*Navigator.push(
+                  Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => Breakfast(
                               
-                              coffeeobj: widget.coffeeobj)));*/
+                              coffeeobj: widget.coffeeobj)));
                 }
               });
             },
