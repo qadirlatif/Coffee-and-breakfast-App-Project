@@ -1,20 +1,26 @@
+import 'package:coffee_breakfast_app/Discover/body.dart';
+import 'package:coffee_breakfast_app/home.dart';
 import 'package:flutter/material.dart';
+import 'bottomBar.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(primarySwatch: Colors.green),
+      home: const Home(),
+      routes: {
+        '/home': (context) => const BottomBar(),
+      },
     );
   }
 }
