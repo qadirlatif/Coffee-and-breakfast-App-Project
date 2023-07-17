@@ -1,3 +1,4 @@
+import 'package:coffee_breakfast_app/preloader/preloader.dart';
 import 'package:coffee_breakfast_app/profile/profile_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
@@ -18,13 +19,11 @@ class Profile extends StatelessWidget {
             child: Stack(
               children: [
                 ClipRRect(
-                  child: Image.network(
-                    'https://guycounseling.com/wp-content/uploads/2018/06/man-drinking-coffee.jpg',
-                    height: MediaQuery.of(context).size.height * 0.6,
-                    width: MediaQuery.of(context).size.width * 1,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                    child: Preloader(
+                        imageurl:
+                            'https://guycounseling.com/wp-content/uploads/2018/06/man-drinking-coffee.jpg',
+                        height: 0.6,
+                        width: 1)),
                 Container(
                   height: MediaQuery.of(context).size.height,
                   decoration: BoxDecoration(
@@ -44,7 +43,7 @@ class Profile extends StatelessWidget {
                 SafeArea(
                     child: Padding(
                   padding: EdgeInsets.fromLTRB(
-                      24, 0, 24, MediaQuery.of(context).size.height * 0.15),
+                      12, 8, 12, MediaQuery.of(context).size.height * 0.15),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
