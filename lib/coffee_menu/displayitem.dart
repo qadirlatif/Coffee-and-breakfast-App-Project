@@ -1,4 +1,3 @@
-
 import 'package:coffee_breakfast_app/preloader/preloader.dart';
 import 'package:flutter/material.dart';
 import 'displayer_bottom_sheet.dart';
@@ -51,9 +50,8 @@ class _DisplayerState extends State<Displayer> {
       child: Stack(
         children: [
           ClipRRect(
-            child: 
-            Preloader(imageurl: widget.coffee.url, height: 0.6, width: 1)
-          ),
+              child: Preloader(
+                  imageurl: widget.coffee.url, height: 0.6, width: 1)),
           SafeArea(
               child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -74,7 +72,10 @@ class _DisplayerState extends State<Displayer> {
                   });
                 },
               ),
-              DisplayerBottomSheet(coffee: widget.coffee, coffeeobj: widget.coffeeobj,)
+              DisplayerBottomSheet(
+                coffee: widget.coffee,
+                coffeeobj: widget.coffeeobj,
+              )
             ],
           )),
           Column(

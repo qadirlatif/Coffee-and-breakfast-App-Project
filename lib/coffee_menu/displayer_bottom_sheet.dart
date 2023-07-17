@@ -3,7 +3,8 @@ import '../model_class/model_class.dart';
 
 // ignore: must_be_immutable
 class DisplayerBottomSheet extends StatefulWidget {
-  DisplayerBottomSheet({super.key, required this.coffee, required this.coffeeobj});
+  DisplayerBottomSheet(
+      {super.key, required this.coffee, required this.coffeeobj});
   Coffeeandbreakfast coffee;
   Coffeeandbreakfast coffeeobj;
   @override
@@ -11,19 +12,16 @@ class DisplayerBottomSheet extends StatefulWidget {
 }
 
 class _DisplayerBottomSheetState extends State<DisplayerBottomSheet> {
-  
-  
-  bool check(Coffeeandbreakfast coffee){
-    if(widget.coffeeobj.Bag.contains(coffee)){
+  bool check(Coffeeandbreakfast coffee) {
+    if (widget.coffeeobj.Bag.contains(coffee)) {
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }
+
   @override
   Widget build(BuildContext context) {
-    
     return Container(
         height: MediaQuery.of(context).size.height * 0.5,
         decoration: const BoxDecoration(
@@ -96,7 +94,7 @@ class _DisplayerBottomSheetState extends State<DisplayerBottomSheet> {
                     children: [
                       const Text("price"),
                       Text(
-                        "\$ "+widget.coffee.Price.toString(),
+                        "\$ " + widget.coffee.Price.toString(),
                         style: const TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 25),
                       )
@@ -108,21 +106,20 @@ class _DisplayerBottomSheetState extends State<DisplayerBottomSheet> {
                       child: ElevatedButton(
                         onPressed: () {
                           setState(() {
-                          if(check(widget.coffee)){
-
-                            widget.coffeeobj.Bag.remove(widget.coffee);
-                          }
-                          else{
-                            widget.coffeeobj.Bag.add(widget.coffee);
-                          }
-
+                            if (check(widget.coffee)) {
+                              widget.coffeeobj.Bag.remove(widget.coffee);
+                            } else {
+                              widget.coffeeobj.Bag.add(widget.coffee);
+                            }
                           });
                         },
                         style: ElevatedButton.styleFrom(
                             shape: const RoundedRectangleBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10)))),
-                        child:  Text(check(widget.coffee)? "Remove From Bag" : "Add To Bag"),
+                        child: Text(check(widget.coffee)
+                            ? "Remove From Bag"
+                            : "Add To Bag"),
                       ))
                 ],
               )

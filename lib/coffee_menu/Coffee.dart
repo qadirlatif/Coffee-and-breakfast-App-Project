@@ -26,13 +26,14 @@ class _CoffeeState extends State<Coffee> {
             child: Stack(
               children: [
                 ClipRRect(
-                  child: 
-                  Preloader(imageurl: 'https://t4.ftcdn.net/jpg/01/05/90/77/360_F_105907729_4RzHYsHJ2UFt5koUI19fc6VzyFPEjeXe.jpg', height: 0.5, width: 1)
-                ),
-                 Column(
+                    child: Preloader(
+                        imageurl:
+                            'https://t4.ftcdn.net/jpg/01/05/90/77/360_F_105907729_4RzHYsHJ2UFt5koUI19fc6VzyFPEjeXe.jpg',
+                        height: 0.5,
+                        width: 1)),
+                Column(
                   children: [
                     TopStackText(),
-
                     CustomBottomSheet(coffee: widget.coffeeobj)
                   ],
                 )

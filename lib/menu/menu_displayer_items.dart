@@ -41,9 +41,8 @@ class _MenuItemsState extends State<MenuItems> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Breakfast(
-                              
-                              coffeeobj: widget.coffeeobj)));
+                          builder: (context) =>
+                              Breakfast(coffeeobj: widget.coffeeobj)));
                 }
               });
             },
@@ -53,12 +52,13 @@ class _MenuItemsState extends State<MenuItems> {
               child: Column(
                 children: [
                   CachedNetworkImage(
-      placeholder: (context, url) => Image.asset('assets/preloader.gif'),
-      imageUrl: widget.menu.url,
-      width: MediaQuery.of(context).size.width * 0.45,
-      fit: BoxFit.fill,
-      height: 120,
-    ),
+                    placeholder: (context, url) =>
+                        Image.asset('assets/preloader.gif'),
+                    imageUrl: widget.menu.url,
+                    width: MediaQuery.of(context).size.width * 0.45,
+                    fit: BoxFit.fill,
+                    height: 120,
+                  ),
                   Padding(
                       padding: const EdgeInsets.fromLTRB(8, 4, 0, 0),
                       child: Align(

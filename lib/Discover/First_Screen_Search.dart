@@ -9,10 +9,9 @@ class Searchfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width*0.9,
+      width: MediaQuery.of(context).size.width * 0.9,
       height: 60,
       child: TextField(
-        
         onTapOutside: (event) =>
             FocusScope.of(context).requestFocus(FocusNode()),
         cursorWidth: 2,
@@ -20,10 +19,9 @@ class Searchfield extends StatelessWidget {
           fillColor: Colors.white,
           filled: true,
           border: OutlineInputBorder(
-            
-              borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide(color: Colors.black),
-              ),
+            borderRadius: BorderRadius.circular(30),
+            borderSide: BorderSide(color: Colors.black),
+          ),
           hintText: text,
           hintStyle: const TextStyle(color: Color.fromRGBO(0, 0, 0, 0.4)),
           prefixIcon: const Icon(

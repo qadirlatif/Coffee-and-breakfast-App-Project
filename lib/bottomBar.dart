@@ -1,4 +1,4 @@
-//import 'package:coffee_and_breakfast_app/profile/profile.dart';
+import 'package:coffee_breakfast_app/profile/profile.dart';
 
 import 'package:coffee_breakfast_app/bags/Bags.dart';
 import 'favorites/favorites.dart';
@@ -42,9 +42,10 @@ class _MenuState extends State<BottomBar> {
                     ? Bags(
                         coffeeobj: menu,
                       )
-                    :/* index == 4
+                    : index == 4
                         ? const Profile()
-                        :*/ const Body(),
+                        :
+                    const Body(),
         bottomNavigationBar: PreferredSize(
             preferredSize: const Size.fromHeight(50),
             child: Container(

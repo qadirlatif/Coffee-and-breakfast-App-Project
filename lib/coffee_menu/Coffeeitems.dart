@@ -5,7 +5,11 @@ import '../model_class/model_class.dart';
 
 // ignore: camel_case_types, must_be_immutable
 class coffeeitems extends StatefulWidget {
-  coffeeitems({super.key, required this.coffee, required this.index, required this.coffeeobj});
+  coffeeitems(
+      {super.key,
+      required this.coffee,
+      required this.index,
+      required this.coffeeobj});
   Coffeeandbreakfast coffee;
   int index;
   Coffeeandbreakfast coffeeobj;
@@ -23,9 +27,8 @@ class _coffeeitemsState extends State<coffeeitems> {
               context,
               MaterialPageRoute(
                   builder: (context) => Displayer(
-                        coffee: widget.coffee.Coffees[widget.index],
-                        coffeeobj: widget.coffeeobj
-                      )));
+                      coffee: widget.coffee.Coffees[widget.index],
+                      coffeeobj: widget.coffeeobj)));
         });
       },
       child: SizedBox(
@@ -40,10 +43,11 @@ class _coffeeitemsState extends State<coffeeitems> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
-                  child: 
-                      Preloader(imageurl: widget.coffee.Coffees[widget.index].url, height: 0.15, width: 0.3)
-                ),
+                    borderRadius: BorderRadius.circular(15),
+                    child: Preloader(
+                        imageurl: widget.coffee.Coffees[widget.index].url,
+                        height: 0.15,
+                        width: 0.3)),
                 const Padding(padding: EdgeInsets.fromLTRB(8, 0, 8, 0)),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,7 +70,8 @@ class _coffeeitemsState extends State<coffeeitems> {
                       ),
                     ),
                     Text(
-                      "\$ "+widget.coffee.Coffees[widget.index].Price.toString(),
+                      "\$ " +
+                          widget.coffee.Coffees[widget.index].Price.toString(),
                       style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 20),
                     )

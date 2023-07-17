@@ -4,10 +4,8 @@ import 'package:coffee_breakfast_app/preloader/preloader.dart';
 import 'package:flutter/material.dart';
 import '../model_class/model_class.dart';
 
-
 // ignore: must_be_immutable
 class Breakfast extends StatefulWidget {
-
   Breakfast({super.key, required this.coffeeobj});
   Coffeeandbreakfast coffeeobj;
   @override
@@ -49,8 +47,11 @@ class _BreakfastState extends State<Breakfast> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            
-                            Preloader(imageurl: 'https://static-01.daraz.pk/p/bb5e284f0bb2c88d3c6c32e2b8000fd0.jpg', height: 0.4, width: 1),
+                            Preloader(
+                                imageurl:
+                                    'https://static-01.daraz.pk/p/bb5e284f0bb2c88d3c6c32e2b8000fd0.jpg',
+                                height: 0.4,
+                                width: 1),
                             const Column(
                               children: [
                                 Text(
@@ -94,10 +95,10 @@ class _BreakfastState extends State<Breakfast> {
                     onPressed: () {
                       setState(() {
                         Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => BreakfastMenu(
-                              coffeeobj: widget.coffeeobj)));
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BreakfastMenu(
+                                    coffeeobj: widget.coffeeobj)));
                       });
                     },
                     child: const Text("Full Menu"),

@@ -3,11 +3,11 @@ class Coffeeandbreakfast {
   late String name;
   late String qoute;
   late double Price;
-  List<Coffeeandbreakfast> Bag=[];
+  List<Coffeeandbreakfast> Bag = [];
   List<Coffeeandbreakfast> favorites = [];
   List<Coffeeandbreakfast> Menu = [];
   List<Coffeeandbreakfast> Coffees = [];
-  List<Coffeeandbreakfast> breakfast=[];
+  List<Coffeeandbreakfast> breakfast = [];
 
   Coffeeandbreakfast(this.url, this.name, this.qoute, this.Price);
 
@@ -70,7 +70,8 @@ class Coffeeandbreakfast {
         10.00);
     Coffees.add(caramelfrappe);
   }
-  void addbreakfast(){
+
+  void addbreakfast() {
     Coffeeandbreakfast chickenvigiepie = Coffeeandbreakfast(
         'https://images.eatsmarter.com/sites/default/files/styles/max_size/public/chicken-and-vegetable-pie-515170.jpg',
         'Chicken & vigie pie',

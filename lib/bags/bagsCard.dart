@@ -41,7 +41,6 @@ class BagsCard extends StatelessWidget {
                     ),
                     const Padding(padding: EdgeInsets.all(8)),
                     Text(coffeeobj.Bag[i].qoute),
-                    
                   ],
                 ),
                 Text(

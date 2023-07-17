@@ -16,9 +16,11 @@ class Body extends StatelessWidget {
       child: Stack(
         children: [
           ClipRRect(
-            child: 
-            Preloader(imageurl: 'https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZmZlZSUyMGN1cHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80', height: 1, width: 1)
-          ),
+              child: Preloader(
+                  imageurl:
+                      'https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZmZlZSUyMGN1cHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
+                  height: 1,
+                  width: 1)),
           Container(
             decoration:
                 const BoxDecoration(color: Color.fromRGBO(0, 0, 0, 0.3)),
@@ -42,7 +44,9 @@ class Body extends StatelessWidget {
                   Padding(
                       padding:
                           EdgeInsets.fromLTRB(width * 0.05, 0, width * 0.05, 0),
-                      child:  Searchfield(text: "What Would you like to try today?",)),
+                      child: Searchfield(
+                        text: "What Would you like to try today?",
+                      )),
                   const IntroText()
                 ],
               )),

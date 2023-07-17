@@ -12,9 +12,7 @@ class CustomBottomSheet extends StatefulWidget {
 }
 
 class _CustomBottomSheetState extends State<CustomBottomSheet> {
-  
   @override
-  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -64,9 +62,11 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                     ),
                   ),
                   const Padding(padding: EdgeInsets.fromLTRB(0, 8, 0, 0)),
-                  for(int i=0;i<widget.coffee.Coffees.length;i++)
-                  coffeeitems(coffee: widget.coffee, index: i, coffeeobj: widget.coffee)
-                  
+                  for (int i = 0; i < widget.coffee.Coffees.length; i++)
+                    coffeeitems(
+                        coffee: widget.coffee,
+                        index: i,
+                        coffeeobj: widget.coffee)
                 ],
               ),
             )));
