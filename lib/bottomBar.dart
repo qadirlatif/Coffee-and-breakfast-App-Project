@@ -1,8 +1,7 @@
+// ignore: file_names
 import 'package:coffee_breakfast_app/profile/profile.dart';
-
 import 'package:coffee_breakfast_app/bags/Bags.dart';
 import 'favorites/favorites.dart';
-
 import 'Discover/body.dart';
 import 'package:flutter/material.dart';
 import 'model_class/model_class.dart';
@@ -44,8 +43,7 @@ class _MenuState extends State<BottomBar> {
                       )
                     : index == 4
                         ? const Profile()
-                        :
-                    const Body(),
+                        : const Body(),
         bottomNavigationBar: PreferredSize(
             preferredSize: const Size.fromHeight(50),
             child: Container(

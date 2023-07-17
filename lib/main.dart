@@ -1,6 +1,7 @@
+import 'package:coffee_breakfast_app/Discover/body.dart';
+import 'package:coffee_breakfast_app/home.dart';
 import 'package:flutter/material.dart';
 import 'bottomBar.dart';
-import 'splash_screen/splashscree.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,14 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.green
-          //colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 32, 238, 39)),
-          //useMaterial3: true,
-          ),
-      home: const SplashScreen(),
+      theme: ThemeData(primarySwatch: Colors.green),
+      home: const Home(),
       routes: {
         '/home': (context) => const BottomBar(),
-        //'/Coffee': (context) => const Coffee(),
       },
     );
   }

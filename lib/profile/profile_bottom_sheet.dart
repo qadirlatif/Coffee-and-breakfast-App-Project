@@ -23,10 +23,10 @@ class ProfileBottomSheet extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CustomWidget().customwidget("11"),
-                      CustomWidget().customwidget("986"),
-                      CustomWidget().customwidget("128"),
-                      CustomWidget().customwidget("52"),
+                      const CustomWidget().customwidget("11"),
+                      const CustomWidget().customwidget("986"),
+                      const CustomWidget().customwidget("128"),
+                      const CustomWidget().customwidget("52"),
                     ],
                   ),
                   const Text(
@@ -50,12 +50,14 @@ class ProfileBottomSheet extends StatelessWidget {
 }
 
 class CustomWidget extends Material {
+  const CustomWidget({super.key});
+
   Widget customwidget(String numbers) {
     return Column(
       children: [
         Text(
           numbers,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
         ),
         const Text(
           "Favorites",
